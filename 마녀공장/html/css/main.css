@@ -1,0 +1,296 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 1;
+    color: #333;
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 메뉴아이콘 클릭 시 나타남 */
+body.body_bg::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #0000006f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.inner {
+    max-width: 100%;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header .inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .inner h1 {
+    height: 25px;
+}
+
+header .inner  nav {
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none;
+    background-color: #fff;
+    overflow: auto; /* 스크롤바 생성 */
+}
+
+/* 스크롤바 스타일 없애기 */
+header .inner nav::-webkit-scrollbar {
+    display: none;
+}
+
+header .inner nav .menu_close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+header .inner  nav > ul {
+    padding: 0 20px;
+    margin-top: 130px;
+    font-size: 18px;
+}
+
+header .inner  nav > ul .depth01 {
+    border-bottom: 1px solid #838383;
+    padding-bottom: 25px;
+    margin: 25px;
+}
+
+header .inner  nav > ul .depth01 .depth02 li {
+    font-size: 16px;
+    margin-top: 15px;
+    color: #838383;
+}
+
+.main_visual {
+    height: 750px;
+    position: relative;
+}
+
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.main_visual div {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 110px;
+    left: 0;
+}
+
+.main_visual div h2 {
+    font-size: 35px;
+    line-height: 1.3;
+    
+}
+
+.main_visual div a {
+    width: 170px;
+    height: 45px;
+    border: 1px solid #333;
+    border-radius: 40px;
+    text-align: center;
+    line-height: 45px;
+    display: block;
+    margin: 30px auto;
+}
+
+.best .inner h3 {
+    font-size: 30px;
+    margin-top: 60px;
+    font-weight: 700;
+}
+
+.best_menu {
+    display: flex;
+}
+
+.best_menu li {
+    margin: 30px 15px 0 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.best .inner .best_menu li.on {
+    color: #BB181D;
+}
+
+.best .inner .list {
+    /* display: flex; */
+    display: none;
+}
+
+
+.best .inner .list.on {
+    margin: 15px 0 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.best .inner .list .item {
+    width: calc(100% / 2 - 5px);
+    align-items: center;
+}
+
+.best .inner .list .item img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.best .inner .list .item .text h4 {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.best .inner .list .item .text p {
+    text-decoration: line-through;
+    color: #838383;
+}
+
+.best .inner .list .item .text ul {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.best .inner .list .item .text ul li:nth-child(2) {
+    color: #BB181D;
+}
+
+.best .inner > a {
+    width: 350px;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 auto;
+    border: 1px solid #333;
+    border-radius: 20px;
+    text-align: center;
+    display: block;
+}
+
+.event .title {
+    margin-top: 60px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.event .title h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.event .title a::before {
+    content: '';
+    width: 8px;
+    height: 12px;
+    background-image: url('../img/icon_right_.png');
+    background-size: 100% 100%;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.event .title a {
+    font-size: 14px;
+    padding-right: 15px;
+    position: relative;
+}
+
+.event .item {
+    display: none;
+}
+
+.event .item.on {
+    display: block;
+}
+
+.event .item img {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.event .item div {
+    margin-bottom: 60px;
+}
+
+.event .item a div h4 {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.event .item a div p {
+    font-size: 16px;
+    margin-top: 15px;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.event .item a div span {
+    font-size: 14px;
+    color: #838383;
+    margin-top: 30px;
+    display: block;
+    font-weight: 500;
+}
+
+footer {
+    background-color: #ff0000;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    padding: 20px 0;
+    line-height: 1.3;
+}
+
+
